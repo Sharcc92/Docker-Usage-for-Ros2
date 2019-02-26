@@ -1,10 +1,6 @@
 #!/usr/bin/python
 
-
-#MSE=Minimal Service Example
-#import os #?
-#import sys #?
-from roboy_cognition_msgs.srv import Talk #AddTwoInts.srv (a,b,--sum) #from MSE
+from roboy_cognition_msgs.srv import Talk
 
 
 g_node=None #from MSE
