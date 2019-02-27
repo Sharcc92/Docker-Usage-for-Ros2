@@ -11,8 +11,9 @@ class Soncreo_TTS_class:
 		#load models
 		pass
 	
-	#def synthesize(self, message):
+	def synthesize(self, message):
 		#function which synthesise the text to the model!!
+		pass
 	
 	def talk_callback(request,response):
 		global g_node
@@ -38,6 +39,9 @@ def main(args=None):
 	#create service
 	srv=g_node.create_service(Talk,'/roboy/cognition/speech/synthesis/talk',Soncreo_TTS_class.talk_callback)
 	print ("Ready to /roboy/cognition/speech/synthesis/talk")
+
+	#Speech Synthesis is ready now.
+	Soncreo_TTS_class.synthesize("Speech synthesis is ready now")
 	
 	#loop RCLpy
 	while rclpy.ok():
