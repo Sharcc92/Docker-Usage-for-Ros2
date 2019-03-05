@@ -29,13 +29,7 @@ If you want to avoid typing sudo whenever you run the docker command, add your u
 `su - ${USER}`
 
 
-# Step 3 - Helpful commands
-- Info Subcommands: `docker`
-- Running Docker Images: `docker ps`
-- Make a shared folder between container and host: `docker run -v /host/directory:/container/directory -other -options image_name command_to_run` e.g. `docker run -v /home/martin/Docker-Usage-for-Ros2:/tmp -it missxa/bouncy-roboy bash`
-
-
-# Step 4 - Working with Docker Images
+# Step 3 - Working with Docker Images
 Test a image from Docker
 ```
 docker run hello-world
@@ -49,21 +43,18 @@ See existing Docker images on your computer
 docker images
 ```
 
-# Step 5 - Running a Docker Container
+# Step 4 - Running a Docker Container
 Choose Ubuntu Container and then start the container
-```
-docker run missxa/bouncy-roboy
-```
-Run commands (general)
+Run commands (in the shell)
 ```
 docker run -it missxa/bouncy-roboy bash
 ```
-Run commands (in a shell)
+Run commands (in a shell with shared folder). The guest folder can be found in 
 ```
-docker run -v /home/martin/Docker-Usage-for-Ros2:/tmp -it missxa/bouncy-roboy bash
+docker run -v /path/to/folder/host:/path/to/folder/guest -it missxa/bouncy-roboy bash
 ```
 
-# Step 6 - Managing Docker Containers
+# Step 5 - Managing Docker Containers
 
 See active Docker container
 ```
@@ -85,8 +76,8 @@ Login Docker (if Required) e.g. docker-registry-username is sharcc92
 ```
 docker login -u docker-registry-username
 ```
-# Step 7 - Creating a own Docker from an existing container (unfinished)
-Instructions can be found in https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/. 
-An image of an docker contains of three parts (just information): `[username]/[imagename]:[tags]`
-Create a new image: `docker commit -m "add ROS2 for Soncreo"  -a "sharcc92" missxa/bouncy-roboy sharcc92/soncreoROS2:v1`
+# Step 6 - Helpful commands
+- Info Subcommands: `docker`
+- Running Docker Images: `docker ps`
+- Make a shared folder between container and host: `docker run -v /host/directory:/container/directory -other -options image_name command_to_run` e.g. `docker run -v /home/martin/Docker-Usage-for-Ros2:/tmp -it missxa/bouncy-roboy bash`
 
