@@ -85,3 +85,8 @@ Login Docker (if Required) e.g. docker-registry-username is sharcc92
 ```
 docker login -u docker-registry-username
 ```
+# Step 7 - Creating a own Docker from an existing container (unfinished)
+Instructions can be found in https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/. 
+An image of an docker contains of three parts (just information): `[username]/[imagename]:[tags]`
+Create a new image: `docker commit -m "add ROS2 for Soncreo"  -a "sharcc92" missxa/bouncy-roboy sharcc92/soncreoROS2:v1`
+
