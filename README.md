@@ -40,9 +40,9 @@ Test a image from Docker
 ```
 docker run hello-world
 ```
-Pull a existing Docker
+Pull a existing Docker e.g. from (https://hub.docker.com/r/missxa/bouncy-roboy)
 ```
-https://hub.docker.com/r/missxa/bouncy-roboy
+docker pull missxa/bouncy-roboy
 ```
 See existing Docker images on your computer
 ```
